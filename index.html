@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Doodle Warehouse</title>
+    <link rel="stylesheet" href="product.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+    <header>
+        <h1>Dreamy Doodle Warehouse</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="cart.html" id="cart-btn">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="products">
+            <h2>Cutey Doodles</h2>
+            <div class="product-grid">
+                <div class="product" data-id="1" data-name="Product Title 1" data-price="10.00">
+                    <img src="product1.jpg" alt="Product 1">
+                    <h3>Product Title 1</h3>
+                    <p>Description of Product 1. High-quality image available for download.</p>
+                    <p>Price: $10.00</p>
+                    <button onclick="addToCart(this)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-id="2" data-name="Product Title 2" data-price="15.00">
+                    <img src="product2.jpg" alt="Product 2">
+                    <h3>Product Title 2</h3>
+                    <p>Description of Product 2. Stunning digital artwork.</p>
+                    <p>Price: $15.00</p>
+                    <button onclick="addToCart(this)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-id="3" data-name="Product Title 3" data-price="12.00">
+                    <img src="product3.jpg" alt="Product 3">
+                    <h3>Product Title 3</h3>
+                    <p>Description of Product 3. Beautiful photography available for download.</p>
+                    <p>Price: $12.00</p>
+                    <button onclick="addToCart(this)">Add to Cart</button>
+                </div>
+
+                <div class="product" data-id="4" data-name="Product Title 4" data-price="9.00">
+                    <img src="product4.jpg" alt="Product 4">
+                    <h3>Product Title 4</h3>
+                    <p>Description of Product 4. Beautiful photography available for download.</p>
+                    <p>Price: $9.00</p>
+                    <button onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact">
+            <h2>Get in Touch</h2>
+            <form id="contact-form" onsubmit="submitContactForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="response-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Dreamy Doodle Warehouse | <a href="#contact">Contact Us</a></p>
+    </footer>
+
+    <script src="cart.js"></script> <!-- Include the cart-specific JavaScript file -->
+    <script src="product.js"></script> <!-- Include the product-specific JavaScript file -->
+</body>
+
+</html>
